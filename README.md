@@ -1,2 +1,1 @@
-# React_practice
-practice react
+# Practice makes perfect.
