@@ -2,6 +2,10 @@
 
 ## Redux의 state 관리
 
+<center>
+action 객체를 dispatch => reducer(순수함수)가 정해진 logic에 따라 값을 반환 => store update
+</center>
+
 0. `createStore`로 redux의 state 저장소 생성
 
 1. 사용자에 의해 action이 발생하면 해당 action 객체를 actions 폴더에서 찾아 반환
