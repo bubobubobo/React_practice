@@ -2,9 +2,9 @@
 
 ## Redux의 state 관리
 
-<center>
+<p text-align="center">
 action 객체를 dispatch => reducer(순수함수)가 정해진 logic에 따라 값을 반환 => store update
-</center>
+</p>
 
 0. `createStore`로 redux의 state 저장소 생성
 
