@@ -2,7 +2,7 @@
 
 ## Redux의 state 관리
 
-<p text-align="center">
+<p align="center">
 action 객체를 dispatch => reducer(순수함수)가 정해진 logic에 따라 값을 반환 => store update
 </p>
 
