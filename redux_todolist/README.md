@@ -2,6 +2,8 @@
 
 ## Redux의 state 관리
 
+0. `createStore`로 redux의 state 저장소 생성
+
 1. 사용자에 의해 action이 발생하면 해당 action 객체를 actions 폴더에서 찾아 반환
 
 2. 반환된 action의 **type**에 따라 정의한 reducer대로 state 변경
