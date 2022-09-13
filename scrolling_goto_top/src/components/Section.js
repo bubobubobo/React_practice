@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import useScrollY from '../Hooks/Scroll';
 import GotoTop from './GotoTop';
 
 const Title = styled.h1`
@@ -24,15 +26,31 @@ const Article = styled.article`
 `;
 
 const Main = () => {
-  const sections = [1, 2, 3, 4];
+  const articles = [1, 2, 3, 4];
+
+  // state
+  const [showGotoTop, setShowGotoTop] = useState(false);
+
+  // custom Hook
+  const [scrollY, setScrollY] = useScrollY();
+
+  useEffect(() => {
+    if (scrollY > 300) setShowGotoTop(true);
+    else setShowGotoTop(false);
+  }, [scrollY]);
+
+  const gotoTop = () => {
+    // default smooth behavior
+    setScrollY(0);
+  };
 
   return (
     <>
       <Title>Scrolling goto top</Title>
-      {sections.map((sec, idx) => (
+      {articles.map((sec, idx) => (
         <Article key={idx}>Section {sec}</Article>
       ))}
-      <GotoTop />
+      {showGotoTop && <GotoTop gotoTop={gotoTop} />}
     </>
   );
 };

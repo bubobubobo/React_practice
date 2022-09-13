@@ -22,6 +22,7 @@ const ScrollIcon = styled.div`
   // display: none;
 `;
 
-const GotoTop = () => <ScrollIcon className="scroll-icon bx bxs-chevrons-up"></ScrollIcon>;
+// Styling normal React components: https://styled-components.com/docs/advanced#styling-normal-react-components
+const GotoTop = ({ gotoTop }) => <ScrollIcon onClick={gotoTop} className="scroll-icon bx bxs-chevrons-up"></ScrollIcon>;
 
 export default GotoTop;
